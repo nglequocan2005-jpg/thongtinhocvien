@@ -105,10 +105,10 @@
 <script>
     // Điền ID và tên Sheet (Mặc định trang đầu tiên thường là Sheet1)
     const SHEET_ID = '1Ff1hN-yEo6n0Zs16dgma4oNEEE7zVLUhO83_H49uLDc';
-    const SHEET_NAME = 'Sheet1'; 
+    const SHEET_NAME = 'data'; 
     
     // Đường dẫn lấy dữ liệu dạng tsv (Tab-Separated Values) cực kỳ nhẹ và chuẩn xác
-    const FULL_URL = `https://docs.google.com/spreadsheets/d/${SHEET_ID}/gviz/tq?tqx=out:csv&sheet=${SHEET_NAME}`;
+    const FULL_URL = `https://docs.google.com/spreadsheets/d/${SHEET_ID}/gviz/tq?tqx=out:csv&sheet=${data}`;
 
     let DATA_SOURCE = [];
     let HEADERS = [];
