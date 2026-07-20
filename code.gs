@@ -1,9 +1,10 @@
 function formatDate(d) {
+  if (!d || d === "-") return "-";
   if (!(d instanceof Date)) return d;
 
   return Utilities.formatDate(
     d,
-    Session.getScriptTimeZone(),
+    "Asia/Ho_Chi_Minh",
     "dd/MM/yyyy"
   );
 }
