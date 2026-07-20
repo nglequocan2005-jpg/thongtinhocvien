@@ -1,144 +1,115 @@
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Poppins,sans-serif;
+/* Thiết lập cơ bản */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
 }
 
-body{
-
-background:#f5f7fb;
-
-display:flex;
-
-justify-content:center;
-
-padding:40px;
-
+body {
+    background: #f5f7fb;
+    display: flex;
+    justify-content: center;
+    padding: 40px 20px; /* Thêm khoảng cách ở hai bên cho mobile */
+    min-height: 100vh;
 }
 
-.container{
-
-width:900px;
-
-background:white;
-
-padding:30px;
-
-border-radius:15px;
-
-box-shadow:0 10px 25px rgba(0,0,0,.1);
-
+/* Khung nội dung chính */
+.container {
+    width: 100%;
+    max-width: 900px;
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
 }
 
-h1{
-
-text-align:center;
-
-margin-bottom:25px;
-
-color:#2d3436;
-
+h1 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #1e3a8a; /* Xanh Navy đậm - chuyên nghiệp */
 }
 
-.search-box{
-
-display:flex;
-
-gap:10px;
-
+/* Khu vực tìm kiếm */
+.search-box {
+    display: flex;
+    gap: 10px;
 }
 
-input{
-
-flex:1;
-
-padding:14px;
-
-border:1px solid #ddd;
-
-border-radius:10px;
-
-font-size:16px;
-
+input {
+    flex: 1;
+    padding: 14px;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    font-size: 16px;
+    transition: border-color 0.3s;
 }
 
-button{
-
-background:#007bff;
-
-color:white;
-
-border:none;
-
-padding:14px 25px;
-
-border-radius:10px;
-
-cursor:pointer;
-
-font-size:16px;
-
+input:focus {
+    border-color: #1e3a8a;
+    outline: none;
 }
 
-button:hover{
-
-background:#0056b3;
-
+button {
+    background: #1e3a8a;
+    color: white;
+    border: none;
+    padding: 14px 25px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    transition: background 0.3s;
 }
 
-.loading{
-
-display:none;
-
-margin-top:20px;
-
-color:#007bff;
-
-font-weight:bold;
-
+button:hover {
+    background: #172554;
 }
 
-.card{
-
-margin-top:20px;
-
-padding:20px;
-
-border-radius:12px;
-
-background:#f8f9fa;
-
-border-left:5px solid #007bff;
-
+/* Trạng thái Loading */
+.loading {
+    display: none;
+    text-align: center;
+    margin-top: 20px;
+    color: #1e3a8a;
+    font-weight: bold;
 }
 
-.copy{
-
-margin-top:15px;
-
-background:#28a745;
-
+/* Thẻ kết quả (Card) */
+.card {
+    margin-top: 20px;
+    padding: 20px;
+    border-radius: 12px;
+    background: #ffffff;
+    border-left: 5px solid #1e3a8a;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
 }
 
-.copy:hover{
-
-background:#218838;
-
+.copy {
+    margin-top: 15px;
+    background: #0f766e; /* Xanh lục quân */
+    width: auto;
 }
 
-@media(max-width:700px){
-
-.search-box{
-
-flex-direction:column;
-
+.copy:hover {
+    background: #064e3b;
 }
 
-button{
-
-width:100%;
-
-}
-
+/* Responsive cho điện thoại */
+@media(max-width: 700px) {
+    .container {
+        padding: 20px;
+    }
+    
+    .search-box {
+        flex-direction: column;
+    }
+    
+    button {
+        width: 100%;
+    }
+    
+    .card {
+        margin-bottom: 20px;
+    }
 }
