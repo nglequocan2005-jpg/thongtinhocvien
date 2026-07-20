@@ -33,8 +33,8 @@ html += `
 <p><b>Họ và tên:</b> ${item.ten}</p>
 <p><b>Mã học viên:</b> ${item.ma}</p>
 <p><b>Ngày sinh:</b> ${item.ngaysinh}</p>
-<p><b>SĐT:</b> ${item.sdt}</p>
 <p><b>CCCD:</b> ${item.cccd}</p>
+<p><b>SĐT:</b> ${item.sdt}</p>
 <p><b>Quê quán:</b> ${item.quequan}</p>
 <p><b>Trú quán:</b> ${item.truquan}</p>
 <p><b>Dân tộc:</b> ${item.dantoc}</p>
@@ -44,14 +44,18 @@ html += `
 
 <button class="copy"
 onclick="copyData(
-'Họ tên: ${item.ten}\nMã học viên: ${item.ma}\nNgày sinh: ${item.ngaysinh}\nSĐT: ${item.sdt}'
+'Họ tên: ${item.ten}\n' +
+'Mã học viên: ${item.ma}\n' +
+'Ngày sinh: ${item.ngaysinh}\n' +
+'SĐT: ${item.sdt}\n' +
+'Quê quán: ${item.quequan}\n' +
+'Trú quán: ${item.truquan}'
 )">
 📋 Sao chép
 </button>
 
 </div>
 `;
-
 });
 
 }
