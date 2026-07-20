@@ -27,28 +27,29 @@ html="<h3>Không tìm thấy dữ liệu</h3>";
 
 data.forEach(item=>{
 
-html+=`
-
+html += `
 <div class="card">
 
-<p><b>Mã:</b> ${item.ma}</p>
-
-<p><b>Họ tên:</b> ${item.ten}</p>
-
+<p><b>Họ và tên:</b> ${item.ten}</p>
+<p><b>Mã học viên:</b> ${item.ma}</p>
+<p><b>Ngày sinh:</b> ${item.ngaysinh}</p>
 <p><b>SĐT:</b> ${item.sdt}</p>
-
-<p><b>Địa chỉ:</b> ${item.diachi}</p>
+<p><b>CCCD:</b> ${item.cccd}</p>
+<p><b>Quê quán:</b> ${item.quequan}</p>
+<p><b>Trú quán:</b> ${item.truquan}</p>
+<p><b>Dân tộc:</b> ${item.dantoc}</p>
+<p><b>Tôn giáo:</b> ${item.tongiao}</p>
+<p><b>TBM khóa:</b> ${item.tbm}</p>
+<p><b>Xếp loại:</b> ${item.xeploai}</p>
 
 <button class="copy"
-
-onclick="copyData('${item.ma} | ${item.ten} | ${item.sdt} | ${item.diachi}')">
-
+onclick="copyData(
+'Họ tên: ${item.ten}\nMã học viên: ${item.ma}\nNgày sinh: ${item.ngaysinh}\nSĐT: ${item.sdt}'
+)">
 📋 Sao chép
-
 </button>
 
 </div>
-
 `;
 
 });
